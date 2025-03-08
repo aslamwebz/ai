@@ -1,0 +1,22 @@
+# Core dependencies
+streamlit>=1.30.0
+python-dotenv>=1.0.0
+crewai>=0.28.5
+crewai-tools>=0.2.8
+requests>=2.31.0
+
+# LLM and API integrations
+langchain>=0.0.310
+langchain-community>=0.0.10
+
+# Utility packages
+pydantic>=2.4.2
+typing-extensions>=4.8.0
+urllib3>=2.0.7
+beautifulsoup4>=4.12.2
+lxml>=4.9.3
+
+# Optional tools that might be useful
+chromadb>=0.4.18  # For vector storage if needed
+duckduckgo-search>=3.9.4  # Alternative search
+tavily-python>=0.3.0  # Another search option 
