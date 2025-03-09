@@ -1,6 +1,7 @@
 import warnings
 warnings.filterwarnings('ignore')
 
+
 import streamlit as st
 import os
 from dotenv import load_dotenv
@@ -14,6 +15,7 @@ search_tool = SerperDevTool()
 website_search_tool = WebsiteSearchTool()
 
 os.environ["serper_api_key"] = os.getenv("SERPER_API_KEY")
+os.environ['CREWAI_DISABLE_TELEMETRY'] = 'true'
 
 def check_ollama_server():
     try:
@@ -29,6 +31,16 @@ def check_ollama_server():
         return False
     
 check_ollama_server()
+
+def get_ollama_llm(llm_model="ollama/deepseek-r1:7b"):
+    ollama_llm = LLM(
+        model=llm_model,
+        base_url='http://localhost:11434',
+        api_key="",
+    )
+    return ollama_llm
+
+ollama_llm = get_ollama_llm()
 
 st.title("Ollama Agent Comparison")
 

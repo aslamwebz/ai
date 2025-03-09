@@ -1,0 +1,11 @@
+# Core dependencies
+streamlit>=1.30.0
+python-dotenv>=1.0.0
+crewai>=0.28.5
+crewai-tools>=0.2.8
+requests>=2.31.0
+
+# LLM and API integrations
+langchain>=0.0.310
+langchain-community>=0.0.10
+
